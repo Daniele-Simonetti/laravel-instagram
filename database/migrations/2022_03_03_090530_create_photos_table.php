@@ -19,10 +19,10 @@ class CreatePhotosTable extends Migration
             $table->foreign('user_id')
             ->references('id')
             ->on('users')->onDelete('cascade');
-            $table->string('name');
+            $table->string('name',200);
             $table->string('url');
             $table->string('description');
-            $table->text('slug')->unique();
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
